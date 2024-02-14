@@ -4,4 +4,4 @@ from django.views import View
 
 class LandingPageView(View):
     def get(self, request):
-        return render(request, 'landing_page.html', {'title': 'Hospital Management System v2', 'name': 'Emeka'})
+        return render(request, 'landing_page.html', {'title': 'Hospital Management System'})
