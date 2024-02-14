@@ -137,7 +137,7 @@ GRAPHENE = {
     "SCHEMA": "main_app.schema.schema"
 }
 
-STATIC_ROOT = BASE_DIR/'staticfiles'    
-STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / 'static'    
+STATIC_URL = "/static/"
 
 WSGI_APPLICATION = 'hospital_management.wsgi.app'
