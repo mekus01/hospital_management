@@ -81,8 +81,13 @@ WSGI_APPLICATION = 'hospital_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:614cCDaEbCBe52d*116d6gg6EC4b416C@monorail.proxy.rlwy.net:58795/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '614cCDaEbCBe52d*116d6gg6EC4b416C',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '58795',
     }
 }
 
@@ -132,7 +137,7 @@ GRAPHENE = {
     "SCHEMA": "main_app.schema.schema"
 }
 
-STATICFILES_DIRS = [BASE_DIR/'static',]
 STATIC_ROOT = BASE_DIR/'staticfiles'    
+STATIC_URL = "static/"
 
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'hospital_management.wsgi.app'
