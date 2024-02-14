@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#mh@izluza0to$)z&xw8#nvu^79&s9)oriq=($6ky9dyv)r(b2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
@@ -137,7 +137,10 @@ GRAPHENE = {
     "SCHEMA": "main_app.schema.schema"
 }
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 STATIC_ROOT = BASE_DIR / 'static'    
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 
 WSGI_APPLICATION = 'hospital_management.wsgi.app'
